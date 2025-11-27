@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Administrador - Expertos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        <h1> Gestión de Consultas </h1>
+
+        <div class="contenedor-flex">
+
+            <div class="bloque expertos">
+                <h2>Expertos</h2>
+                <div class="acciones">
+                    <button id="Administrador_btAdministrador">Administrador</button>
+                    <button id="Administrador_btExpertos">Experto</button>
+                    <button id="Administrador_btGrupos">Consultas</button>
+                    <label id="Administrador_lblExpertos"></label>
+                    <label id="Administrador_lblGrupos"></label>
+
+                </div>
+            </div>
+
+            <div class="bloque agregar-experto" id="formulario-experto">
+                <h2>Agregar Experto</h2>
+                <form>
+                    <div class="campo">
+                        <label for="area">• Área</label>
+                        <select id="area">
+                            <option value="default">Seleccionar...</option>
+                            <option value="ti">TI</option>
+                            <option value="mkt">Marketing</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="nombre">• Nombre</label>
+                        <input type="text" id="nombre">
+                    </div>
+                    <div class="campo">
+                        <label for="cargo">• Cargo</label>
+                        <input type="text" id="cargo">
+                    </div>
+
+                    <div class="acciones-form">
+                        <button type="submit" class="boton-primario">Aceptar</button>
+                        <button type="button" id="btn-cancelar" class="boton-secundario">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="bloque generar-reporte" id="seccion-reporte">
+                <h2>Generar Reporte</h2>
+                <form>
+                    <div class="campo">
+                        <label for="tipo-reporte">Tipo</label>
+                        <select id="tipo-reporte">
+                            <option value="default">Seleccionar Tipo</option>
+                            <option>Expertos Registrados</option>
+                            <option>Expertos por Área</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="fecha-inicio">Inicio</label>
+                        <input type="date" id="fecha-inicio">
+                    </div>
+                    <div class="campo">
+                        <label for="fecha-fin">Fin</label>
+                        <input type="date" id="fecha-fin">
+                    </div>
+
+                    <div class="acciones-form">
+                        <button type="submit" class="boton-primario">Generar</button>
+                        <button type="button" id="btn-cerrar-reporte" class="boton-secundario">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+     <script type="module">
+        import Cl_index from "./dist/Cl_index.js";
+        new Cl_index()
+    </script>
+
+</body>
+</html>
